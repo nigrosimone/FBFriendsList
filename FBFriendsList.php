@@ -12,8 +12,8 @@ class FBFriendsList
 		{
 			$list = json_decode($matches[0], 1);
 
-			//if( json_last_error() != JSON_ERROR_NONE )
-			//	throw new Exception(sprintf('JSON decode error %d', json_last_error()));
+			if( json_last_error() != JSON_ERROR_NONE )
+				throw new Exception(sprintf('JSON decode error %d', json_last_error()));
 
 			if( isset($list[2]['list']) )
 				$this->FriendsList = array_unique( array_map('intval', $list[2]['list']) );

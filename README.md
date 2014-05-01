@@ -1,4 +1,2 @@
 Facebook InitialChatFriendsList parser
 ====================
-
-
